@@ -2,17 +2,18 @@
 
 (function() {
   let body = document.getElementsByTagName('body');
-  let color = " black";
+//  let color = " black";
   let container = document.createElement('div');
   for (i=1; i<64; i++) {
     let square = document.createElement('div');
-      if (color===" red") {
+//      if (color===" red") {
+    let color = ` rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
         square.style.backgroundColor = color;
-        color = " black";
-      } else {
-        square.style.backgroundColor = color;
-        color = " red";
-      }
+//        color = " black";
+//      } else {
+//        square.style.backgroundColor = color;
+//        color = " red";
+//      }
       square.style.width = " 11.1%";
       square.style.paddingBottom = " 11.1%";
       square.style.float = " left";
