@@ -4,6 +4,12 @@
 function squaresColor() {
   let body = document.getElementsByTagName('body');
   body[0].innerHTML = '';
+
+  let audio = document.createElement('audio');
+  audio.src = './airhorn.mp3';
+  audio.setAttribute('autoplay', '');
+  body[0].appendChild(audio);
+
   let container = document.createElement('div');
   for (i = 1; i < 64; i++) {
     let square = document.createElement('div');
@@ -13,12 +19,16 @@ function squaresColor() {
     square.style.paddingBottom = " 11.1%";
     square.style.float = " left";
     square.setAttribute('class', 'square');
+
     body[0].appendChild(square);
   }
   return;
 }
 
+
 squaresColor();
+
+
 setInterval(function() {
   squaresColor()
 }, 2000);})();
