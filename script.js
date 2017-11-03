@@ -2,8 +2,7 @@
 
 (function() {
   let body = document.getElementsByTagName('body');
-  let blackSquare = document.createElement('div');
-  let color = " red";
+  let color = " black";
   let container = document.createElement('div');
   for (i=1; i<64; i++) {
     let square = document.createElement('div');
