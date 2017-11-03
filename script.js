@@ -10,7 +10,6 @@ function squaresColor() {
   audio.setAttribute('autoplay', '');
   body[0].appendChild(audio);
 
-  let container = document.createElement('div');
   for (i = 1; i < 64; i++) {
     let square = document.createElement('div');
     let color = ` rgb(${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)}, ${Math.floor(Math.random()*255)})`;
