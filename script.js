@@ -7,17 +7,19 @@
   let rowCount = 0;
   let container = document.createElement('div');
   for (i=1; i<64; i++) {
-    rowCount++;
-    if (rowCount===10) {
+    if (rowCount===9) {
       gradient += 31;
       rowCount = 0;
     }
+    rowCount = rowCount + 1;
     let square = document.createElement('div');
       if (colorMarker===" red") {
         square.style.backgroundColor = ` rgb( ${255-gradient}, 0, 0)`;
+        square.innerText = ` rgb( ${255-gradient}, 0, 0)`;
         colorMarker = " black";
       } else {
         square.style.backgroundColor = ` rgb( ${gradient}, ${gradient}, ${gradient})`;
+        square.innerText = ` rgb( ${gradient}, ${gradient}, ${gradient})`;
         colorMarker = " red";
       }
       square.style.width = " 11.1%";
